@@ -27,7 +27,16 @@
   async function init() {
     localizeLabels();
 
-    const tabInfo = await chrome.runtime.sendMessage({ type: 'GET_DOMAIN' });
+    // If opened in a tab with ?domain= param, use that directly
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramDomain = urlParams.get('domain');
+
+    let tabInfo;
+    if (paramDomain) {
+      tabInfo = { domain: paramDomain, url: 'https://' + paramDomain };
+    } else {
+      tabInfo = await chrome.runtime.sendMessage({ type: 'GET_DOMAIN' });
+    }
     currentDomain = tabInfo.domain;
 
     if (!currentDomain || currentDomain === 'localhost' || !tabInfo.url.startsWith('http')) {

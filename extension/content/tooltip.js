@@ -148,7 +148,7 @@ const DRP_Tooltip = {
     prompt.addEventListener('click', (e) => {
       if (e.target.closest('.drp-close')) return;
       try {
-        chrome.runtime.sendMessage({ type: 'OPEN_POPUP' });
+        chrome.runtime.sendMessage({ type: 'OPEN_POPUP', domain });
       } catch (e) { /* extension context invalidated */ }
     });
 

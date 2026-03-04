@@ -72,7 +72,11 @@ async function handleMessage(message, sender) {
       return await handleGetStats();
 
     case 'OPEN_POPUP':
-      // Can't programmatically open popup, but could set badge
+      // Can't programmatically open popup in MV3, so open it in a new tab
+      const popupDomain = message.domain || '';
+      const popupUrl = chrome.runtime.getURL('popup/popup.html') +
+        (popupDomain ? '?domain=' + encodeURIComponent(popupDomain) : '');
+      await chrome.tabs.create({ url: popupUrl });
       return { success: true };
 
     default:
