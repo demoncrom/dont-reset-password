@@ -1,0 +1,41 @@
+name: Release Extension
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read version from manifest
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' extension/manifest.json)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Package extension
+        run: |
+          cd extension
+          zip -r ../drp-extension-v${{ steps.version.outputs.version }}.zip . -x "*.DS_Store"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: v${{ steps.version.outputs.version }}
+          body: |
+            Auto-release from commit ${{ github.sha }}
+
+            ## Install
+            1. Download `drp-extension-v${{ steps.version.outputs.version }}.zip`
+            2. Open `chrome://extensions`
+            3. Enable "Developer mode"
+            4. Drag the zip file into the page, or unzip and click "Load unpacked"
+          files: drp-extension-v${{ steps.version.outputs.version }}.zip
+          make_latest: true
