@@ -1,8 +1,8 @@
+[中文版](README_CN.md)
+
 # Don't Reset Password
 
 A Chrome extension that crowdsources and displays password composition rules next to password input fields — so you never have to reset your password again.
-
-每次忘记某个网站的密码规则而被迫重置密码？这个 Chrome 插件会在密码输入框旁边显示该网站的密码规则，帮你一次就输对密码。
 
 ## Features
 
@@ -12,7 +12,7 @@ A Chrome extension that crowdsources and displays password composition rules nex
 - Voting system to ensure rule accuracy
 - 30+ popular websites pre-loaded (Google, GitHub, Apple, Amazon, etc.)
 - Dark mode support
-- Bilingual UI (English & 中文)
+- Bilingual UI (English & Chinese)
 
 ## Architecture
 
@@ -71,7 +71,7 @@ npm test
 
 ## Pre-loaded Websites
 
-Google, Apple, Microsoft, Amazon, Facebook, GitHub, X (Twitter), Netflix, LinkedIn, Chase Bank, Bank of America, PayPal, Dropbox, Adobe, Spotify, Reddit, Discord, Slack, Notion, Steam, Outlook, Zoom, eBay, Walmart, Instagram, 淘宝, 支付宝, 微信, 京东, 百度, Bilibili
+Google, Apple, Microsoft, Amazon, Facebook, GitHub, X (Twitter), Netflix, LinkedIn, Chase Bank, Bank of America, PayPal, Dropbox, Adobe, Spotify, Reddit, Discord, Slack, Notion, Steam, Outlook, Zoom, eBay, Walmart, Instagram, Taobao, Alipay, WeChat, JD.com, Baidu, Bilibili
 
 ## How It Works
 
