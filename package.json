@@ -1,0 +1,9 @@
+{
+  "name": "dont-reset-password",
+  "version": "1.0.0",
+  "description": "Chrome extension that crowdsources password composition rules",
+  "private": true,
+  "scripts": {
+    "test": "node tests/run-all.js"
+  }
+}

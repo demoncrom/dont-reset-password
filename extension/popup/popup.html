@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- State: Loading (skeleton) -->
+  <div id="state-loading" class="state">
+    <div class="skeleton-row skeleton-title"></div>
+    <div class="skeleton-row skeleton-long"></div>
+    <div class="skeleton-row skeleton-medium"></div>
+    <div class="skeleton-row skeleton-long"></div>
+    <div class="skeleton-row skeleton-short"></div>
+    <p id="loading-text"></p>
+  </div>
+
+  <!-- State: Rules Found -->
+  <div id="state-rules" class="state hidden">
+    <div class="header">
+      <span class="header-icon">&#x1F511;</span>
+      <h2 id="rules-title"></h2>
+    </div>
+    <div id="rules-list" class="rules-list"></div>
+    <div class="meta-row">
+      <span id="rules-confidence" class="confidence"></span>
+      <span id="rules-verified" class="verified"></span>
+    </div>
+    <div class="vote-row">
+      <button id="btn-vote-up" class="vote-btn">&#x1F44D; <span id="vote-up-count">0</span></button>
+      <button id="btn-vote-down" class="vote-btn">&#x1F44E; <span id="vote-down-count">0</span></button>
+    </div>
+    <a id="btn-report" class="report-link" href="#"></a>
+  </div>
+
+  <!-- State: No Rules Found -->
+  <div id="state-no-rules" class="state hidden">
+    <div class="header">
+      <span class="header-icon">&#x1F50D;</span>
+      <h2 id="no-rules-title"></h2>
+    </div>
+    <p id="no-rules-subtitle" class="subtitle"></p>
+
+    <form id="contribute-form" class="contribute-form" novalidate>
+      <div class="form-row">
+        <label for="field-min-length" id="label-min-length"></label>
+        <input type="number" id="field-min-length" min="1" max="200">
+        <span class="error-text" id="error-min-length"></span>
+      </div>
+      <div class="form-row">
+        <label for="field-max-length" id="label-max-length"></label>
+        <input type="number" id="field-max-length" min="1" max="1000">
+        <span class="error-text" id="error-max-length"></span>
+      </div>
+
+      <div class="form-row checkbox-row">
+        <label><input type="checkbox" id="field-require-uppercase"> <span id="label-require-uppercase"></span></label>
+      </div>
+      <div class="form-row checkbox-row">
+        <label><input type="checkbox" id="field-require-lowercase"> <span id="label-require-lowercase"></span></label>
+      </div>
+      <div class="form-row checkbox-row">
+        <label><input type="checkbox" id="field-require-number"> <span id="label-require-number"></span></label>
+      </div>
+      <div class="form-row checkbox-row">
+        <label><input type="checkbox" id="field-require-special"> <span id="label-require-special"></span></label>
+      </div>
+
+      <div class="form-row" id="special-chars-row" style="display:none">
+        <label for="field-allowed-special" id="label-allowed-special"></label>
+        <input type="text" id="field-allowed-special" placeholder="!@#$%^&*()">
+      </div>
+
+      <div class="form-row checkbox-row">
+        <label><input type="checkbox" id="field-no-spaces"> <span id="label-no-spaces"></span></label>
+      </div>
+
+      <div class="form-row">
+        <label for="field-notes" id="label-notes"></label>
+        <textarea id="field-notes" rows="2" maxlength="500"></textarea>
+        <span class="form-hint" id="notes-hint"></span>
+        <span class="error-text" id="error-notes"></span>
+      </div>
+
+      <p class="privacy-notice" id="privacy-notice"></p>
+
+      <div class="form-error-banner" id="form-error-banner"></div>
+
+      <button type="submit" id="btn-submit" class="btn-primary"></button>
+    </form>
+  </div>
+
+  <!-- State: Submission Success -->
+  <div id="state-success" class="state hidden">
+    <div class="success-checkmark"></div>
+    <p id="success-message"></p>
+  </div>
+
+  <!-- State: Not on a Website -->
+  <div id="state-no-website" class="state hidden">
+    <div class="header">
+      <span class="header-icon">&#x1F310;</span>
+      <h2 id="no-website-title"></h2>
+    </div>
+    <p id="stats-line" class="stats-line"></p>
+  </div>
+
+  <script src="../utils/domain.js"></script>
+  <script src="../utils/rules-schema.js"></script>
+  <script src="../utils/i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

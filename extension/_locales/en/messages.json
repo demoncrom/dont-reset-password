@@ -1,0 +1,163 @@
+{
+  "extensionName": {
+    "message": "Don't Reset Password"
+  },
+  "extensionDescription": {
+    "message": "Shows password composition rules for websites so you never reset your password again"
+  },
+  "tooltipTitle": {
+    "message": "Password Rules for $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "ruleMinLength": {
+    "message": "At least $COUNT$ characters",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "ruleMaxLength": {
+    "message": "At most $COUNT$ characters",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "ruleRequireUppercase": {
+    "message": "Must include uppercase letter"
+  },
+  "ruleRequireLowercase": {
+    "message": "Must include lowercase letter"
+  },
+  "ruleRequireNumber": {
+    "message": "Must include a number"
+  },
+  "ruleRequireSpecial": {
+    "message": "Must include special character"
+  },
+  "ruleAllowedSpecialChars": {
+    "message": "Allowed special characters: $CHARS$",
+    "placeholders": {
+      "chars": { "content": "$1" }
+    }
+  },
+  "ruleDisallowedChars": {
+    "message": "Characters not allowed: $CHARS$",
+    "placeholders": {
+      "chars": { "content": "$1" }
+    }
+  },
+  "ruleNoSpaces": {
+    "message": "Spaces not allowed"
+  },
+  "confidenceHigh": {
+    "message": "High"
+  },
+  "confidenceMedium": {
+    "message": "Medium"
+  },
+  "confidenceLow": {
+    "message": "Low"
+  },
+  "confidenceLabel": {
+    "message": "Confidence: $LEVEL$ ($COUNT$ contributors)",
+    "placeholders": {
+      "level": { "content": "$1" },
+      "count": { "content": "$2" }
+    }
+  },
+  "noRulesFound": {
+    "message": "No password rules found for this site"
+  },
+  "contributePrompt": {
+    "message": "Know the rules? Click to contribute"
+  },
+  "popupLoading": {
+    "message": "Checking rules for $DOMAIN$...",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popupNoRulesTitle": {
+    "message": "No rules found for $DOMAIN$",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popupBeFirstContributor": {
+    "message": "Be the first to contribute!"
+  },
+  "popupNotOnWebsite": {
+    "message": "Visit a website to see or contribute password rules"
+  },
+  "popupStatsLine": {
+    "message": "We have rules for $DOMAINS$ websites from $CONTRIBUTORS$ contributors",
+    "placeholders": {
+      "domains": { "content": "$1" },
+      "contributors": { "content": "$2" }
+    }
+  },
+  "formMinLength": {
+    "message": "Minimum length"
+  },
+  "formMaxLength": {
+    "message": "Maximum length"
+  },
+  "formRequireUppercase": {
+    "message": "Requires uppercase letter"
+  },
+  "formRequireLowercase": {
+    "message": "Requires lowercase letter"
+  },
+  "formRequireNumber": {
+    "message": "Requires number"
+  },
+  "formRequireSpecial": {
+    "message": "Requires special character"
+  },
+  "formAllowedSpecialChars": {
+    "message": "Allowed special characters"
+  },
+  "formNoSpaces": {
+    "message": "No spaces allowed"
+  },
+  "formNotes": {
+    "message": "Additional notes"
+  },
+  "formSubmit": {
+    "message": "Submit"
+  },
+  "formSubmitSuccess": {
+    "message": "Thanks! Your contribution helps everyone."
+  },
+  "reportIncorrect": {
+    "message": "Rules incorrect? Report or edit"
+  },
+  "lastVerified": {
+    "message": "Last verified $TIME$",
+    "placeholders": {
+      "time": { "content": "$1" }
+    }
+  },
+  "notesHint": {
+    "message": "Do NOT enter your password here. Only describe the rules."
+  },
+  "privacyNotice": {
+    "message": "We only collect password rules (e.g. \"min 8 chars, requires uppercase\"). We never collect, access, or transmit your actual password."
+  },
+  "validationMinRange": {
+    "message": "Must be between 1 and 200"
+  },
+  "validationMaxRange": {
+    "message": "Must be between 1 and 1000"
+  },
+  "validationMinExceedsMax": {
+    "message": "Cannot exceed maximum length"
+  },
+  "validationNotesTooLong": {
+    "message": "500 characters maximum"
+  },
+  "submitError": {
+    "message": "Submission failed. Please try again."
+  }
+}

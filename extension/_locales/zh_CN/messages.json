@@ -1,0 +1,163 @@
+{
+  "extensionName": {
+    "message": "别重置密码了"
+  },
+  "extensionDescription": {
+    "message": "在密码输入框旁显示网站的密码规则，让你不再需要重置密码"
+  },
+  "tooltipTitle": {
+    "message": "$DOMAIN$ 的密码规则",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "ruleMinLength": {
+    "message": "至少 $COUNT$ 个字符",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "ruleMaxLength": {
+    "message": "最多 $COUNT$ 个字符",
+    "placeholders": {
+      "count": { "content": "$1" }
+    }
+  },
+  "ruleRequireUppercase": {
+    "message": "必须包含大写字母"
+  },
+  "ruleRequireLowercase": {
+    "message": "必须包含小写字母"
+  },
+  "ruleRequireNumber": {
+    "message": "必须包含数字"
+  },
+  "ruleRequireSpecial": {
+    "message": "必须包含特殊符号"
+  },
+  "ruleAllowedSpecialChars": {
+    "message": "允许的特殊符号：$CHARS$",
+    "placeholders": {
+      "chars": { "content": "$1" }
+    }
+  },
+  "ruleDisallowedChars": {
+    "message": "不允许的字符：$CHARS$",
+    "placeholders": {
+      "chars": { "content": "$1" }
+    }
+  },
+  "ruleNoSpaces": {
+    "message": "不允许空格"
+  },
+  "confidenceHigh": {
+    "message": "高"
+  },
+  "confidenceMedium": {
+    "message": "中"
+  },
+  "confidenceLow": {
+    "message": "低"
+  },
+  "confidenceLabel": {
+    "message": "置信度：$LEVEL$（$COUNT$ 人贡献）",
+    "placeholders": {
+      "level": { "content": "$1" },
+      "count": { "content": "$2" }
+    }
+  },
+  "noRulesFound": {
+    "message": "未找到该网站的密码规则"
+  },
+  "contributePrompt": {
+    "message": "知道密码规则？点击贡献"
+  },
+  "popupLoading": {
+    "message": "正在查询 $DOMAIN$ 的规则...",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popupNoRulesTitle": {
+    "message": "未找到 $DOMAIN$ 的规则",
+    "placeholders": {
+      "domain": { "content": "$1" }
+    }
+  },
+  "popupBeFirstContributor": {
+    "message": "成为第一个贡献者！"
+  },
+  "popupNotOnWebsite": {
+    "message": "访问一个网站来查看或贡献密码规则"
+  },
+  "popupStatsLine": {
+    "message": "已收录 $DOMAINS$ 个网站的规则，来自 $CONTRIBUTORS$ 位贡献者",
+    "placeholders": {
+      "domains": { "content": "$1" },
+      "contributors": { "content": "$2" }
+    }
+  },
+  "formMinLength": {
+    "message": "最小长度"
+  },
+  "formMaxLength": {
+    "message": "最大长度"
+  },
+  "formRequireUppercase": {
+    "message": "必须包含大写字母"
+  },
+  "formRequireLowercase": {
+    "message": "必须包含小写字母"
+  },
+  "formRequireNumber": {
+    "message": "必须包含数字"
+  },
+  "formRequireSpecial": {
+    "message": "必须包含特殊符号"
+  },
+  "formAllowedSpecialChars": {
+    "message": "允许的特殊符号"
+  },
+  "formNoSpaces": {
+    "message": "不允许空格"
+  },
+  "formNotes": {
+    "message": "补充说明"
+  },
+  "formSubmit": {
+    "message": "提交"
+  },
+  "formSubmitSuccess": {
+    "message": "感谢！你的贡献帮助了每一个人。"
+  },
+  "reportIncorrect": {
+    "message": "规则不对？举报或修改"
+  },
+  "lastVerified": {
+    "message": "最后验证于 $TIME$",
+    "placeholders": {
+      "time": { "content": "$1" }
+    }
+  },
+  "notesHint": {
+    "message": "请勿在此输入你的密码，只需描述密码规则。"
+  },
+  "privacyNotice": {
+    "message": "我们只收集密码规则（如「至少8位、需要大写字母」），绝不会收集、访问或传输你的真实密码。"
+  },
+  "validationMinRange": {
+    "message": "必须在 1 到 200 之间"
+  },
+  "validationMaxRange": {
+    "message": "必须在 1 到 1000 之间"
+  },
+  "validationMinExceedsMax": {
+    "message": "不能超过最大长度"
+  },
+  "validationNotesTooLong": {
+    "message": "最多 500 个字符"
+  },
+  "submitError": {
+    "message": "提交失败，请重试。"
+  }
+}
